@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<!-- DADOS FIXOS NAO AUTERAR -->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta nome="viewport" content="width-device-width, initial-scale=1.0">
+		
+		<!-- LINK PARA CSS -->
+			<link rel="stylesheet" type="text/css" href="doc.css" media="screen">
+		<!-- FINAL LINK PARA CSS -->
+
+		<title>REGRA DE 3</title>
+	</head>
+
+<!-- FIM DE DADOS FIXOS -->
+
+<!-- COMEÇO DAS CONFINGS HTML -->
+<style>
+
+	*{
+box-sizing:border-box;
+box-sizing: border-box;
+     }
+
+body
+{
+padding: 0px 340px;
+height: 10px;
+display: flex;
+align-items: center;
+background-image: linear-gradient(45deg,#1C1C1C,#000000);
+height: 150vh;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+}
+.itens
+{
+position: absolute;
+min-height:120vh;
+margin: -10%;
+}
+
+input
+{
+position: absolute;
+text-align: center;
+background:	#A9A9A9;
+font-size: 30px;
+text-align: center;
+width: 200px;
+height: 50px;
+cursor: pointer;
+margin: 3px;
+border: none;
+}
+ .botao:hover
+{
+align-items: center;
+height: 60px;
+width: 250px;
+background-color: #696969;
+color: black;
+transition-duration: 0.5s;
+font-size: 30px;
+ }
+.botao
+{
+width: 200px;
+height: 50px;
+font-size: 25px;
+cursor: pointer;
+margin: 50px;
+background-color: rgb(31,31,31);
+border: none;
+color: #fff;
+margin-left: 30%;
+
+}
+
+.resultado
+{
+
+font-size: 25px;
+width: 10%;
+margin-left: 55%;
+margin-top: -7%;
+}
+
+.fraçãoI
+{
+	padding: 60px 50px;
+}
+#FfI{
+	padding: 0px 50px;
+	left: 260px;
+}
+#fII
+{
+	left : 50px;
+}
+#resultado{
+	left: 260px;
+}
+.nome
+{
+	padding: 0px 100px;
+	font-family: 'ubuntu', cursive;
+	color: 	#008080;
+	font-size: 50px;
+}
+.criado
+{
+margin-left: 40%;
+}
+</style>
+
+	
+	<body>
+<div class= "itens">
+		<h1 class = "nome">REGRA DE 3</h1>
+		<form class="fraçãoI">
+			<input type="text" id="fI" required>
+			<input type="text" id="FfI" required>
+		</form>
+
+		<form class="fBaixo">
+			<input type="text" id="fII" required>
+		</form>
+
+		<form class="resultado">
+			<h1 id="resultado">X</h1>
+		</form>
+		<button class="botao" onclick="resultado()">RESULTADO</button>
+<link href="https://fonts.googleapis.com/css2?family=Fruktur&display=swap" rel="stylesheet">
+  <a class="criado" href="https://www.instagram.com/guilherme_srf/" target="_blank">GUILHERME</a>
+</div>
+	</body>
+
+<!-- JS-->
+	<script>
+		
+		function resultado(){
+
+			let fraçãoI = document.getElementById("fI").value;
+			let sobreFraçãoI= document.getElementById("FfI").value; 
+			let fraçãoII = document.getElementById("fII").value; 
+			let sobreFraçãoII = 0;
+
+			let resultadoI = fraçãoI;
+
+			let resultadoII = fraçãoII*sobreFraçãoI;
+
+			let resultadoIII = resultadoII/resultadoI;
+
+			document.querySelector("#resultado").innerHTML = resultadoIII; 
+
+		}
+
+	</script>
+
+</html>
+<!-- FIM -->
